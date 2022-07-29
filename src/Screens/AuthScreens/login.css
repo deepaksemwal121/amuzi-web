@@ -1,0 +1,29 @@
+#checkb {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: rgba(40,40,40,0.2);
+    color:black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+
+#checkb:checked {
+    background: rgba(40,40,40,0.7);
+}
+
+
+.checkbox-container {
+    position: absolute;
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
