@@ -1,8 +1,11 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import Navbar from "../../components/Navbar";
 
 const Event = () => {
   return (
+    <>
+    <Navbar />
     <div className="bg-[#141414] text-white">
       <div className="flex items-start pt-10 h-2/3">
         <div className="w-3/4 ml-10 mr-5 h-full">
@@ -10,7 +13,7 @@ const Event = () => {
             width={"100%"}
             height={"400px"}
             controls={true}
-            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+            url="https://f53112b70bc31005.mediapackage.ap-south-1.amazonaws.com/out/v1/042f416656c64668ad1bb7b2ac951b46/index.m3u8"
           />
         </div>
         <div className="w-1/4 mr-10 ml-5 h-full">
@@ -212,6 +215,7 @@ const Event = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
