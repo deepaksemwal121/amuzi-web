@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-
+const SERVER_URL = 'https://amuzi.backend.upgrate.in';
 const [phoneNummber, setPhoneNumber] = useState("")
 const [hide , setHide] = useState(true);
 const [loader,setLoader] = useState(false);
@@ -44,7 +44,7 @@ const handlePhoneNumber = async(e) => {
     phoneNo : "91"+phoneNummber
    }
    try{
-    const res =  await axios.post("http://ec2-65-1-136-90.ap-south-1.compute.amazonaws.com:3000/v1/user/auth/login",data);
+    const res =  await axios.post(`${SERVER_URL}/v1/user/auth/login`,data);
       console.log(res.data.message)
       setHide(false)
       setLoader(false)
@@ -66,7 +66,7 @@ const handleOTP = async(e) => {
     }
     console.log(data);
     try {
-      const res =  await axios.post("http://ec2-65-1-136-90.ap-south-1.compute.amazonaws.com:3000/v1/user/auth/verify-otp", data);
+      const res =  await axios.post(`${SERVER_URL}/v1/user/auth/verify-otp`, data);
       console.log(res)
       setLoader(false);
       localStorage.setItem("accessToken",res.data.accessToken);
